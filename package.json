@@ -2,5 +2,30 @@
   "name": "lutz-store",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "app/web",
+    "app/api"
+  ],
+  "scripts": {
+    "dev": "yarn workspaces run dev",
+    "dev:web": "yarn workspace @lutz-store/web dev",
+    "dev:api": "yarn workspace @lutz-store/api dev",
+    "start": "yarn workspaces run start",
+    "lint": "yarn workspaces run lint -o .lint.log",
+    "lint:web": "yarn workspaces @lutz-store/web run lint",
+    "lint:api": "yarn workspaces @lutz-store/api run lint"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.36.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2"
+  }
 }

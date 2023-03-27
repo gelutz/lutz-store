@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"outDir": "dist",
+		"rootDir": "./src",
+		"module": "commonjs",
+		"target": "esnext",
+		"sourceMap": true,
+		"strict": true,
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+	},
+}
