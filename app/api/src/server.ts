@@ -1,9 +1,11 @@
 import express from 'express'
 
-import { Routes } from './routes'
+import './config/dotenv'
+import { router } from './routes'
+
 const app = express()
 
 app.use(express.json())
-app.use(Routes)
+app.use(router)
 
-app.listen(3000, () => console.log('Server listening'))
+app.listen(process.env.API_PORT, () => console.log('Server listening'))
